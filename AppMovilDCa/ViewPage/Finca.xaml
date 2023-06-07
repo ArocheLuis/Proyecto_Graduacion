@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilDCa.ViewPage.Finca">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarAgregarp" Clicked="toolbarAgregarp_Clicked" IconImageSource="ic_agregar.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Ingrese Nombre de Finca" x:Name="searchFinca" TextChanged="searchFinca_TextChanged"/>
+            <ScrollView BindingContext="{Binding oEntityCLS}">
+                <ListView ItemsSource="{Binding listaFinca}" 
+                          x:Name="lstFinca" ItemSelected="lstFinca_ItemSelected"  Margin="8,8" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Eliminar" x:Name="menuEliminar" Clicked="menuEliminar_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="{Binding NombreFinca,StringFormat='Nombre Finca: {0}'}" Grid.Column="0" Grid.Row="0"
+                                           HorizontalOptions="Center" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Ubicacion, StringFormat='Ubicacion: {0}'}" Grid.Column="0" Grid.Row="1" Margin="10,0,0,0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+     </ContentPage.Content>
+        
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding titulo}"
+             x:Class="AppMovilDCa.ViewPage.FormPersona">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BindingContext="{Binding oPersonaCLS}" Margin="5">
+                <Label Text="IdPersona Persona" />
+                <Entry Text="{Binding IdPersona}" />
+                <Label Text="PrimerNombre Persona" />
+                <Entry Text="{Binding PrimerNombre}" />
+                <Label Text="SegundoNombre Persona" />
+                <Entry Text="{Binding SegundoNombre}" />
+                <Label Text="PrimerApellido Persona" />
+                <Entry Text="{Binding PrimerApellido}" />
+                <Label Text="SegundoApellido Persona" />
+                <Entry Text="{Binding SegundoApellido}" />
+                <Label Text="Telefono Persona" />
+                <Entry Text="{Binding Telefono}" />
+                <Label Text="Direccion Persona" />
+                <Entry Text="{Binding Direccion}" />
+                <Label Text="Email Persona" />
+                <Entry Text="{Binding Email}" />
+                <Label Text="Sexo Persona" />
+                <Label Text="FechaDeNacimiento Persona" />
+                <Entry Text="{Binding FechaNacimiento}" />
+                <Label Text="Sexo Persona" />
+                <Entry Text="{Binding Sexo}" />
+                <Label Text="BTieneUsuario Persona" />
+                <Entry Text="{Binding BTieneUsuario}" />
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Button Text="Guardar" x:Name="GuardarPersona" Clicked="GuardarPersona_Clicked"/>
+                    <Button Text="Regresar" x:Name="Regresar" Clicked="Regresar_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

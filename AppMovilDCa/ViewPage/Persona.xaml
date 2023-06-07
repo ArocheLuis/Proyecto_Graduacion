@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilDCa.ViewPage.Persona">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarAgregarr" Clicked="toolbarAgregarr_Clicked"  IconImageSource="ic_agregar.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="searchPersona" TextChanged="searchPersona_TextChanged" Margin="0,0,0,5" />
+            <ScrollView BindingContext="{Binding oEntityCLS}">
+                <ListView ItemsSource="{Binding listaPersona}"
+                x:Name="lstPersona" ItemSelected="lstPersona_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Eliminar" x:Name="MenuEliminar" Clicked="MenuEliminar_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid Margin="0,5,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Nombre" Grid.Column="0" Grid.Row="0" FontAttributes="Bold" Margin="8,0,0,0"/>
+                                    <Label Text="{Binding PrimerNombre}" Grid.Column="0" Grid.Row="1" Margin="8,0,0,0" />
+                                    <Label Text="Apellido" Grid.Column="1" Grid.Row="0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding PrimerApellido}" Grid.Column="1" Grid.Row="1" />
+                                    <Label Text="Telefono" Grid.Column="2" Grid.Row="0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Telefono}" Grid.Column="2" Grid.Row="1"  />
+                                    <Label Text="Direcion" Grid.Column="3" Grid.Row="0" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Direccion}" Grid.Column="3" Grid.Row="1"  />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

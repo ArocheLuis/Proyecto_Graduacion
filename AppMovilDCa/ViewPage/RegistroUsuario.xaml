@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilDCa.ViewPage.RegistroUsuario">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Registro Usuario" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"
+                   TextTransform="Uppercase">
+                </Label>
+                <BoxView HeightRequest="5" BackgroundColor="#F4A460"/>
+                <Grid Margin="15,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0"  Text="Primer Nombre" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtPrimerNombre"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="0" Keyboard="Text" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="1"  Text="Segundo Nombre" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtSegundoNombre"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="1" Keyboard="Text" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="2"  Text="Primer Apellido" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtPrimerApellido"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="2" Keyboard="Text" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="3"  Text="Segundo Apellido" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtSegundoApellido"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="3" Keyboard="Text" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="4"  Text="Telefono" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtTelefono"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="4" Keyboard="Telephone" FontSize="19" MaxLength="8" />
+
+                    <Label Grid.Column="0" Grid.Row="5"  Text="Email" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtEmail"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="5" Keyboard="Email" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="6"  Text="Fecha de Nacimiento" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtFechaNacimiento"
+                       />
+                    <DatePicker Grid.Column="1" Grid.Row="6" Format="dd/MM/yyyy" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="7"  Text="Sexo" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" VerticalOptions="Center" 
+                       />
+                    <StackLayout Grid.Column="1" Grid.Row="7">
+                        <RadioButton Content="Masculino" x:Name="txtMasculino"/>
+                        <RadioButton Content="Femenino" x:Name="txtFemenino"/>
+                    </StackLayout>
+
+                    <Label Grid.Column="0" Grid.Row="8"  Text="Usuario" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtUsuario"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="8" Keyboard="Text" FontSize="19" />
+
+                    <Label Grid.Column="0" Grid.Row="9"  Text="Contrasenia" FontSize="19" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       TextColor="Black" x:Name="txtContra"
+                       />
+                    <Entry Grid.Column="1" Grid.Row="9" Keyboard="Text" FontSize="19" IsPassword="True" />
+
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Registrar" BackgroundColor="#556B2F" CornerRadius="20" x:Name="btnRegistrar"
+                            Clicked="btnRegistrar_Clicked"/>
+                    <Button Text="Volver" BackgroundColor="#A52A2A" CornerRadius="20" x:Name="btnVolver" 
+                            Clicked="btnVolver_Clicked"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+      
+    </ContentPage.Content>
+</ContentPage>
